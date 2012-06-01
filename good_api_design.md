@@ -94,6 +94,8 @@ API Design
 * avoid values that demand exceptional processing: return zero-length array or empty collection, not `null`
 
 **Exceptions**
+* ROSE rule of thumb: an error in a library should fail hard (ROSE_ASSERT(false)); Only when the function is specifically written for a 
+  client (i.e., GUI) exceptions can be considered.
 * don't force client to use exceptions for control flow
 * don't fail silently
 * favor unchecked exceptions
